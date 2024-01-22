@@ -1,0 +1,35 @@
+.about-wrapper {
+	position: relative;
+	background-image: url(/images/about/about-bg.jpg);
+	width: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.about {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding-top: 50px;
+	color: white;
+	flex-direction: column;
+	align-items: center;
+	font-size: 20px;
+	direction: rtl;
+	line-height: 32px;
+	text-align: center;
+}
+
+.about-title {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.about-line {
+	width: 100px;
+	height: 4px;
+	margin: 15px 0 30px 20px;
+}
