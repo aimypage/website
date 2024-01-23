@@ -41,3 +41,49 @@ loadBackground('dummy-who-bg', 'who-wrapper');
 loadBackground('dummy-pricing-bg', 'pricing-wrapper');
 
 loadBackground('dummy-contact-bg', 'contact-wrapper');
+
+const name = document.getElementById("name");
+const phone = document.getElementById("phone");
+const email = document.getElementById("email");
+const comments = document.getElementById("comments");
+
+name.addEventListener('click', () => {
+	name.style.backgroundColor = "#FFFFFF";
+});
+
+email.addEventListener('click', () => {
+	email.style.backgroundColor = "#FFFFFF";
+});
+
+phone.addEventListener('click', () => {
+	phone.style.backgroundColor = "#FFFFFF";
+});
+
+function sendForm() {
+	name.style.backgroundColor = '#FFFFFF';
+	phone.style.backgroundColor = '#FFFFFF';
+	email.style.backgroundColor = '#FFFFFF';
+
+	let hasError = false;
+
+	if(name.value.length < 1) {
+		name.style.backgroundColor = '#ef9a9a';
+		hasError = true;
+	}
+
+	if(email.value.length < 1) {
+		email.style.backgroundColor = '#ef9a9a';
+		hasError = true;
+	}
+
+	if(phone.value.length < 1) {
+		phone.style.backgroundColor = '#ef9a9a';
+		hasError = true;
+	}
+
+	// send data
+	if(hasError === false) {
+		document.getElementsByClassName("contact-form")[0].style.display = "none";
+		document.getElementsByClassName("contact-form-sent")[0].style.display = "";
+	}
+}

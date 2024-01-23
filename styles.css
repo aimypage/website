@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	font-family: Arial;
 }
@@ -43,6 +47,7 @@ body {
 
 .main-center {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
@@ -59,4 +64,20 @@ body {
 .main-bottom-subtitle {
 	font-size: 2.5vw;
 	margin: 40px;
+}
+
+.jump-to-top {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	z-index: 999;
+}
+
+.jump-to-top img {
+	width: 60px;
+	border-radius: 50%;
+}
+
+.contact-form input {
+	transition: background-color 0.5s;
 }

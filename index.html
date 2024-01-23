@@ -25,21 +25,26 @@
 	<link href="contact.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="main-wrapper">
+<a class="jump-to-top" href="#top"><img src="images/up.png" alt="חזור למעלה"></a>
+
+<div id="#top" class="main-wrapper">
 	<img src="/images/home/home-bg.png" class="dummy-main-bg" style="display: none">
 	<div class="main">
 		<div class="main-top">
 			<img src="images/home/Aimy.png" alt="" />
 			<div class="main-top-buttons">
-				<img class="main-top-button" src="images/home/about_us.png" alt="" />
-				<img class="main-top-button" src="images/home/contact_us.png" alt="" />
-				<img class="main-top-button" src="images/home/who_is_it_for.png" alt="" />
-				<img class="main-top-button" src="images/home/prices.png" alt="" />
-				<img class="main-top-button" src="images/home/how_is_works.png" alt="" />
+				<a href="#contact"><img class="main-top-button" src="images/home/contact_us.png" alt="" /></a>
+				<a href="#price"><img class="main-top-button" src="images/home/prices.png" alt="" /></a>
+				<a href="#who"><img class="main-top-button" src="images/home/who_is_it_for.png" alt="" /></a>
+				<a href="#how"><img class="main-top-button" src="images/home/how_is_works.png" alt="" /></a>
+				<a href="#about"><img class="main-top-button" src="images/home/about_us.png" alt="" /></a>
 			</div>
 		</div>
 		<div class="main-center">
-			<img src="images/home/explain.png" alt="" style="width: 60%;" />
+			<img src="images/home/explain.png" alt="" style="width: 60%; max-width: 900px;" />
+			<a href="#price">
+				<img src="images/home/explain-button.png" alt="" style="cursor: pointer; margin-top: 30px;" />
+			</a>
 		</div>
 	</div>
 </div>
@@ -49,7 +54,7 @@
 	<img src="images/home/sample_pages.png" alt="" style="width: 100%;" />
 </div>
 
-<div class="about-wrapper">
+<div id="about" class="about-wrapper">
 	<img src="/images/about/about-bg.jpg" class="dummy-about-bg" style="display: none">
 	<div class="about">
 		<div class="about-title">מי אנחנו?</div>
@@ -69,8 +74,7 @@
 	</div>
 </div>
 
-
-<div class="how-wrapper">
+<div id="how" class="how-wrapper">
 	<img src="/images/how_it_works/how-bg.jpg" class="dummy-how-bg" style="display: none">
 	<div class="how">
 		<div class="how-title">איך זה עובד?</div>
@@ -125,8 +129,7 @@
 	</div>
 </div>
 
-
-<div class="who-wrapper">
+<div id="who" class="who-wrapper">
 	<img src="/images/who/who-bg.jpg" class="dummy-who-bg" style="display: none">
 	<div class="who">
 		<div class="who-top">
@@ -173,7 +176,7 @@
 	</div>
 </div>
 
-<div class="pricing-wrapper">
+<div id="price" class="pricing-wrapper">
 	<img src="/images/pricing/pricing-bg.jpg" class="dummy-pricing-bg" style="display: none">
 	<div class="pricing">
 		<div class="pricing-title">כמה זה עולה?</div>
@@ -183,28 +186,41 @@
 			<br/>
 			עם המנוי שמתאים לכם
 		</div>
-		<img src="images/pricing/packages.png" alt="" style="width: 70%;" />
+		<div class="pricing-packages">
+			<a href="#">
+				<img src="images/pricing/package3.png" alt="" />
+			</a><a href="#">
+				<img src="images/pricing/package2.png" alt="" />
+			</a><a href="#">
+				<img src="images/pricing/package1.png" alt="" />
+			</a>
+		</div>
+		<!--		<img src="images/pricing/packages.png" alt="" style="width: 60%; max-width: 1300px;" />-->
 	</div>
 </div>
 
-<div class="contact-wrapper">
+<div id="contact" class="contact-wrapper">
 	<img src="/images/contact/contact-bg.jpg" class="dummy-contact-bg" style="display: none">
 	<div class="contact">
 		<div class="who-title">יצירת קשר</div>
 		<img src="images/who/line.png" class="contact-line" alt="" />
 
+		<div class="contact-form-sent" style="display: none">
+			פניתך נשלחה בהצלחה.
+		</div>
+
 		<div class="contact-form">
-			<input type="text" placeholder="*שם" />
+			<input id="name" type="text" placeholder="*שם" />
 
 			<div style="display: flex; column-gap: 20px; margin: 20px 0;">
-				<input type="text" placeholder="*מייל" />
-				<input type="text" placeholder="*טלפון" />
+				<input id="email" type="text" placeholder="*מייל" />
+				<input id="phone" type="text" placeholder="*טלפון" />
 			</div>
 
-			<textarea rows="5" placeholder="הודעה"></textarea>
+			<textarea id="comments" rows="5" placeholder="הודעה"></textarea>
 
-			<div style="text-align: left">
-				<button>שליחה</button>
+			<div style="text-align: left; padding-top: 10px;">
+				<button onclick="sendForm()">שליחה</button>
 			</div>
 		</div>
 	</div>

@@ -28,8 +28,16 @@
 	font-weight: bold;
 }
 
-.pricing-subtitle {
+.pricing-packages {
+	font-size: 0;
+}
 
+.pricing-packages img {
+	width: calc(80% / 3);
+}
+
+.pricing-packages img:hover {
+	filter: contrast(110%) saturate(150%);
 }
 
 .pricing-line {
